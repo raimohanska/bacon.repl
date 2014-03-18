@@ -3,10 +3,9 @@
 ### build
 
     git submodule init
-    npm install -g coffee-script uglify-js
-    ./build
+    npm install
 
 ### run
 
-    python -m SimpleHTTPServer
+    node index.js
     open index.html

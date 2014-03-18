@@ -1,3 +1,0 @@
-#!/bin/bash -e
-npm install
-(cd extern/jsrepl&&cake bake)
