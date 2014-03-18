@@ -18,8 +18,11 @@
     background-color: #666;
 }
 /* The current prompt text color */
-.jqconsole-prompt,.jqconsole-header {
+.jqconsole-prompt {
     color: #0d0;
+}
+.jqconsole-header {
+    color: #0f0;
 }
 /* The command history */
 .jqconsole-old-prompt {
