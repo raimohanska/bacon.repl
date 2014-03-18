@@ -1,6 +1,6 @@
 [submodule "extern/jsrepl"]
 	path = extern/jsrepl
-	url = git@github.com:raimohanska/jsrepl.git
+	url = https://github.com/raimohanska/jsrepl.git
 [submodule "extern/jq-console"]
 	path = extern/jq-console
-	url = git@github.com:raimohanska/jq-console.git
+	url = https://github.com/raimohanska/jq-console.git
