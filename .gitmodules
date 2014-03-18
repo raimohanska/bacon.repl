@@ -1,6 +1,3 @@
-[submodule "extern/jsrepl"]
-	path = extern/jsrepl
-	url = https://github.com/raimohanska/jsrepl.git
 [submodule "extern/jq-console"]
 	path = extern/jq-console
 	url = https://github.com/raimohanska/jq-console.git
