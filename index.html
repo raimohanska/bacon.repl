@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="console.css">
+  </head>
+  <body>
+    <div id="console"></div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="extern/jsrepl/build/jsrepl.js" id="jsrepl-script"></script>
+    <script src="extern/jq-console/lib/jqconsole.js"></script>
+    <script>
+      makeREPL(makeConsole)
+
+      function makeREPL(callback) {
+        var repl = new JSREPL({
+        })
+
+        repl.loadLanguage("javascript", function() {
+          $.ajax("node_modules/baconjs/dist/Bacon.js").done(function(baconCode) {
+            repl.eval(baconCode)
+            callback(repl)
+          })
+        })
+      }
+
+      function makeConsole(repl) {
+        var jqconsole = $('#console').jqconsole('Welcome to ponyfood.repl\n', '>>>');
+        var startPrompt = function () {
+          // Start the prompt with history enabled.
+          jqconsole.Prompt(true, function (input) {
+            repl.eval(input)
+          });
+        };
+        startPrompt();
+
+        repl.on("input", function(cb) {
+          alert(cb)
+        })
+        repl.on("output", function(output) { 
+          jqconsole.Write(output, "jqconsole-output")
+        })
+        repl.on("result", function(result) {
+          if (result !== "")
+            jqconsole.Write("==> " + result + "\n", "jqconsole-result")
+          startPrompt();
+        })
+        repl.on("error", function(error) {
+          jqconsole.Write(error + "\n", "jqconsole-error")
+          startPrompt();
+        })
+      }
+    </script>
+  </body>
+</html>
