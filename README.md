@@ -12,4 +12,10 @@ Try it at http://bacon-repl.herokuapp.com/
 ### run
 
     node index.js
-    open index.html
+    open http://localhost:3000/
+
+### Acknowledgements
+
+I stand on the shoulders of giants. Both the Javascript REPL sandbox and
+the graphical console are borrowed from the [repl.it](https://github.com/replit) project. Many thanks
+for the magnificent work!

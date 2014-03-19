@@ -1,8 +1,8 @@
 /* The console container element */
 #console {
   position: absolute;
-  width: 400px;
-  height: 500px;
+  width: 640px;
+  height: 640px;
   background-color:black;
 }
 /* The inner console element. */
