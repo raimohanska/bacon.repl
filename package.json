@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "jquery": "~1",
-    "baconjs": "~0.7.93",
+    "baconjs": "~0.7.94",
     "express": "~3"
   }
 }
